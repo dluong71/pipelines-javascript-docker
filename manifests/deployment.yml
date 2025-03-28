@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: dluongpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dluongpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: dluongpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: dluongpipelinesjavascriptdocker 
+          image: mycontainerregistrydoris123.azurecr.io/dluongpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
